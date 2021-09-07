@@ -1,6 +1,6 @@
 from typing import Set
 
-from pydantic import BaseModel, BaseSettings, Field
+from pydantic import BaseSettings
 
 
 class TelegramClientCredentials(BaseSettings):
@@ -9,7 +9,7 @@ class TelegramClientCredentials(BaseSettings):
     api_hash: str
 
     class Config:
-        env_prefix = 'TELEGRAM_CLIENT_'
+        env_prefix = "TELEGRAM_CLIENT_"
         case_sensitive = False
 
 
@@ -17,7 +17,7 @@ class TelegramBotCredentials(BaseSettings):
     token: str
 
     class Config:
-        env_prefix = 'TELEGRAM_BOT_'
+        env_prefix = "TELEGRAM_BOT_"
 
 
 class Settings(BaseSettings):
@@ -28,9 +28,11 @@ class Settings(BaseSettings):
     tgbot_creds: TelegramBotCredentials
 
     class Config:
-        env_prefix = 'TELEGRAM_'
+        env_prefix = "TELEGRAM_"
         case_sensitive = False
 
 
-settings = Settings(tgclient_creds=TelegramClientCredentials(), tgbot_creds=TelegramBotCredentials())
+settings = Settings(
+    tgclient_creds=TelegramClientCredentials(), tgbot_creds=TelegramBotCredentials()
+)
 print(settings)
