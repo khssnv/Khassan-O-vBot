@@ -1,0 +1,27 @@
+# Python
+.venv/
+*.py[cod]
+__pycache__
+
+# Project
+pyproject.toml
+.flake8
+.*ignore
+.isort.cfg
+Makefile
+README.md
+*.session
+
+# Texts
+*.mo
+
+# Environment
+.env*
+
+# Docker
+docker-compose*.yml
+Dockerfile
+
+# Editors
+.idea/
+tags

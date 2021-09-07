@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  khassan_o_vbot:
+    build:
+      context: .
+    restart: on-failure
+    stop_signal: SIGINT
+    environment:
+      TELEGRAM_ME:
+      TELEGRAM_CLIENT_SESSION:
+      TELEGRAM_CLIENT_API_ID:
+      TELEGRAM_CLIENT_API_HASH:
+      TELEGRAM_AGGREGATION_CHANNEL:
+      TELEGRAM_AGGREGATED_CHATS:
+      TELEGRAM_BOT_TOKEN:
