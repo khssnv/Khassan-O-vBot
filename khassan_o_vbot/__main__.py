@@ -42,6 +42,12 @@ def aiogram_main():
 
     @dp.message_handler(commands=["me"])
     async def me_cmd(message: types.Message):
+        logging.info(f"command me, {message.message_id=}, {message.from_user=}")
+        await message.answer(message)
+
+    @dp.message_handler()
+    async def handler(message: types.Message):
+        logging.info(f"incoming message, {message.message_id=}, {message.from_user=}")
         await message.answer(message)
 
     executor.start_polling(
