@@ -5,6 +5,8 @@ LABEL maintainer="Alisher A. Khassanov <a.khssnv@gmail.com>" \
 
 ARG APP_PATH=/github.com/khssnv/Khassan-O-vBot
 
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 ENV PYTHONPATH "${PYTHONPATH}:${APP_PATH}"
 WORKDIR $APP_PATH
 
