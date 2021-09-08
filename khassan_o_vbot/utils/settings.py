@@ -22,7 +22,7 @@ class TelegramBotCredentials(BaseSettings):
 
 class Settings(BaseSettings):
     me: int
-    aggregation_channel: str
+    aggregation_channel: int
     aggregated_chats: Set[str]
     tgclient_creds: TelegramClientCredentials
     tgbot_creds: TelegramBotCredentials
