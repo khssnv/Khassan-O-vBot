@@ -17,6 +17,7 @@ README.md
 
 # Environment
 .env*
+tgclient.session
 
 # Docker
 docker-compose*.yml
