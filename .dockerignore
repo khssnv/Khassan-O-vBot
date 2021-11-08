@@ -4,11 +4,9 @@
 __pycache__
 
 # Project
-pyproject.toml
 .flake8
 .*ignore
 .isort.cfg
-Makefile
 README.md
 *.session
 

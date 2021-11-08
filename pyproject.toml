@@ -1,8 +1,32 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "khassan-o-vbot"
+version = "0.1.0"
+description = ""
+authors = ["Alisher A. Khassanov <a.khssnv@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiogram = ">=2.14.0"
+coolname = ">=1.1.0"
+pydantic = ">=1.8.2"
+telethon = ">=1.23.0"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+flake8 = "*"
+ipython = "*"
+isort = "*"
+pre-commit = "*"
+
 [tool.black]
 line-length = 88
-target-version = ['py38']
+target-version = ["py38"]
 experimental_string_processing = true
 
 [tool.isort]
-profile = 'black'
+profile = "black"
 multi_line_output = 3
